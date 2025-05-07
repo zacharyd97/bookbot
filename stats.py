@@ -17,9 +17,16 @@ def get_chars(file):
         for letters in lowercase:
             char[letters] += 1
         return char
-            
-def sort_dict(dicts):
-    sorted_dict = dict(sorted(dicts.items()))
-    return sorted_dict
 
+def sortable_dict(character):
+    sortable_list = []
+    for char in character:
+        if char.isalpha() == True:
+            sortable_list.append({"item":char, "num":character[char]})
+    return sortable_list
+
+
+
+def sort_on(dict):
+    return dict["num"]
     
